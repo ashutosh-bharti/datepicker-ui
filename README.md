@@ -11,4 +11,4 @@ Datepicker UI design using jquery-datepicker-ui
 
 ### End Date: Datepicker UI Selection
 
-![Datepicker popup End Date image](https://github.com/ashutosh-bharti/datepicker-ui/blob/master/resources/images/DatePicker-popup.png-endDate?raw=true)
+![Datepicker popup End Date image](https://github.com/ashutosh-bharti/datepicker-ui/blob/master/resources/images/DatePicker-popup-endDate.png?raw=true)
