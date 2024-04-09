@@ -1,0 +1,295 @@
+/* Reset css end */
+button {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol li {
+  list-style: auto;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+label {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "robotocondensed-bold";
+  src: url("../resources/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "robotocondensed-regular";
+  src: url("../resources/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Medium";
+  src: url("../resources/fonts/OpenSans/OpenSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../resources/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+/* font-family-variable */
+:root {
+  /* robotocondensed-regular */
+  --font-robotocondensed-regular: "robotocondensed-regular";
+
+  /* robotocondensed-bold */
+  --font-robotocondensed-bold: "robotocondensed-bold";
+
+  /* OpenSans-Medium */
+  --font-opensans-medium: "OpenSans-Medium";
+
+  /* OpenSans-SemiBold */
+  --font-opensans-semi-bold: "OpenSans-SemiBold";
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #C5CEC7;
+}
+
+h1 {
+  font-family: var(--font-robotocondensed-bold);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  width: 100%;
+  margin: 40px 20px;
+  color: #000;
+}
+
+/* Date-picker input section style start */
+.date-picker-input-section {
+  padding: 48px 40px 48px 40px;
+  border-radius: 20px;
+  background: #F2F2F2;
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.date-picker-input-section .input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-picker-input-section .input-container .input-label {
+  color: #000;
+  font-family: var(--font-opensans-medium);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 0;
+}
+.date-picker-input-section .input-container .input-field {
+  color: #000;
+  font-family: var(--font-opensans-semi-bold);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 16px 0 0;
+  border-radius: 5px;
+  outline: none;
+  padding: 16px 24px;
+  height: 48px;
+}
+
+.date-picker-input-section .input-container .ui-datepicker-trigger {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  top: 30px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CCC;
+  background: transparent;
+  cursor: pointer;
+}
+
+.date-picker-input-section .input-container .ui-datepicker-trigger .input-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .date-picker-input-section {
+    padding: 24px 16px;
+ }
+  .date-picker-input-section .input-container {
+    width: 100%;
+ }
+}
+/* Date-picker input section style end */
+
+/* Date-picker Ui style start */
+.ui-datepicker.survey-portal-date-picker-ui {
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.05);
+  background: #FFF;
+  padding: 34px 16px 16px 16px;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header {
+  border: none;
+  background: #FFF;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-prev,
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-next {
+  display: none !important;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-title {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-title .ui-datepicker-month,
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-title .ui-datepicker-year {
+  font-family: var(--font-robotocondensed-bold);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  max-width: 116px;
+  border: none;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-title .ui-datepicker-year:focus-visible,
+.ui-datepicker.survey-portal-date-picker-ui .ui-widget-header .ui-datepicker-title .ui-datepicker-month:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar thead tr th span {
+  font-family: var(--font-robotocondensed-regular);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #808080;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody {
+  margin-top: 12px;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody tr {
+  margin-bottom: 8px;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody tr td {
+  height: 48px;
+  padding: 0;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody tr td .ui-state-default {
+  font-family: var(--font-robotocondensed-regular);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  height: 46px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F6F6;
+  color: #1C94C4;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody tr td a.ui-state-default {
+  color: #000000;
+  background-color: #FFF;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui .ui-datepicker-calendar tbody tr td a.ui-state-active {
+  background-color: #0000FF;
+  color: #FFF;
+  border-radius: 50%;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-default {
+  background-color: #A5A3F8;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-active {
+  background-color: #0000FF;
+  position: relative;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-active::after {
+  content: '';
+  width: 50%;
+  height: 46px;
+  display: inline-block;
+  background-color: #A5A3F8;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-start-active::after {
+  right: 0;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-end-active::after {
+  left: 0;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color.ui-datepicker-week-end:nth-child(1) a.ui-state-default:not(.ui-state-active) {
+  border-radius: 50% 0 0 50%;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color.ui-datepicker-week-end:last-child a.ui-state-default:not(.ui-state-active) {
+  border-radius: 0 50% 50% 0;
+}
+
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-start-active.ui-state-end-day::after,
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-end-active.ui-state-start-day::after,
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color a.ui-state-end-active.ui-state-start-active::after,
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color.ui-datepicker-week-end:nth-child(1) a.ui-state-default.ui-state-end-active::after,
+.ui-datepicker.survey-portal-date-picker-ui.date-picker-color-ui .ui-datepicker-calendar tbody tr td.ui-datepicker-bg-color.ui-datepicker-week-end:last-child a.ui-state-default.ui-state-start-active::after {
+  content: none;
+}
+/* Date-picker Ui style end */
